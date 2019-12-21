@@ -28,6 +28,7 @@ def check_and_update_gitignore():
 
 def git_commit(msg):
     os.system("git add -A")
+    msg = msg.strip().replace('"', '')
     os.system('git commit -m "%s"' % msg)
 
 def check_remote_and_update():
